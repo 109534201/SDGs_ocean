@@ -39,7 +39,7 @@ ul.MenuBarHorizontal li
 	position: relative;
 	text-align: center;
 	cursor: pointer;
-	width: 7.5em;
+	width: 7em;
 	float: left;
 	border: 1px solid #FFF;
 }
