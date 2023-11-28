@@ -5,112 +5,122 @@ https://109534201.github.io/SDGs_ocean/
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>淨灘報名資訊系統</title>
-<style type="text/css">
-body {
-	background-color: #D0D3E4;
-  padding: 0px;
-  margin: 0px;
-}
-img{
-	border: 8px solid #757DA8;
-	border-radius: 20px;
-	}
- 
-.bt1 {
-	height: 100px;
-	width: 500px;
-	border: 5px solid #757DA8;
-	border-radius: 20px;
-	font-family: "標楷體";
-	font-size: 18px;
-	color: #757DA8;
-	font-weight: bolder;
-	cursor: pointer;
-	box-shadow: 0px 5px 5px 0.5px #666;
-}
-.menu{
 
-  width: 100%;
-  height: 50px;
-  background-color: #757DA8;
-}
-</style>
-<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
-<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>淨灘報名資訊系統</title>
+  <style type="text/css">
+    body {
+      background-color: #D0D3E4;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    img {
+      border: 8px solid #757DA8;
+      border-radius: 20px;
+    }
+
+    .bt1 {
+      height: 100px;
+      width: 500px;
+      border: 5px solid #757DA8;
+      border-radius: 20px;
+      font-family: "標楷體";
+      font-size: 18px;
+      color: #757DA8;
+      font-weight: bolder;
+      cursor: pointer;
+      box-shadow: 0px 5px 5px 0.5px #666;
+    }
+
+    .menu {
+
+      width: 100%;
+      height: 50px;
+      background-color: #757DA8;
+      margin: 0px;
+      /* 去除外邊距，使其能夠緊貼<div>邊緣 */
+      padding: 0px;
+      /* 去除內邊距，使其能夠緊貼<div>邊緣 */
+      list-style-type: none;
+      /* 去除無序列表的標識符 */
+    }
+  </style>
+  <link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+  <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
 </head>
+
 <body>
   <!--
     https://www.zendei.com/article/65771.html
   -->
-<div class="menu">
-<ul>
-  <ul>
-    15             <!-- 二級菜單:菜鳥教程 -->
-    16             <li class="dropdown">
-    17                 <a href="http://www.runoob.com/">
-    18                     菜鳥教程
-    19                 </a>
-    20                 <ul class="dropdown-content">
-    21                     <li>
-    22                         <a href="http://www.runoob.com/html/html-tutorial.html">HTML教程</a>
-    23                     </li>
-    24                     <li>
-    25                         <a href="http://www.runoob.com/css/css-tutorial.html">CSS教程</a>
-    26                     </li>
-    27                     <li>
-    28                         <a href="http://www.runoob.com/html/html5-intro.html">HTML5教程</a>
-    29                     </li>
-    30                     <li>
-    31                         <a href="http://www.runoob.com/css3/css3-tutorial.html">CSS3教程</a>
-    32                     </li>
-    33                 </ul>
-    34             </li>
-    35             <!-- 二級菜單:indienova -->
-    36             <li class="dropdown">
-    37                 <a href="https://indienova.com/">
-    38                     indienova
-    39                 </a>
-    40                 <ul class="dropdown-content">
-    41                     <li>
-    42                         <a href="https://indienova.com/indie-game-news/">文章</a>
-    43                     </li>
-    44                     <li>
-    45                         <a href="https://indienova.com/column/">專題</a>
-    46                     </li>
-    47                     <li>
-    48                         <a href="https://indienova.com/indie-game-development/">開發</a>
-    49                     </li>
-    50                     <li>
-    51                         <a href="https://indienova.com/usergames">游戲</a>
-    52                     </li>
-    53                 </ul>
-    54             </li>
-    55             <!-- 二級菜單:嗶哩嗶哩動畫 -->
-    56             <li class="dropdown">
-    57                 <a href="https://www.bilibili.com/">
-    58                     嗶哩嗶哩動畫
-    59                 </a>
-    60                 <ul class="dropdown-content">
-    61                     <li>
-    62                         <a href="https://www.bilibili.com/v/douga/?spm_id_from=333.334.b_7072696d6172795f6d656e75.2">動畫</a>
-    63                     </li>
-    64                     <li>
-    65                         <a href="https://www.bilibili.com/anime/?spm_id_from=333.334.b_7072696d6172795f6d656e75.7">番劇</a>
-    66                     </li>
-    67                 </ul>
-    68             </li>
-    69             <!-- 右浮動的一級菜單選項:百度 -->
-    70             <li id="baiDu">
-    71                 <a href="https://www.baidu.com/">
-    72                     百度
-    73                 </a>
-    74             </li>
-</ul>
-</div>
+  <div class="menu">
+    <ul>
+      <ul>
+        <!-- 二級菜單:菜鳥教程 -->
+        <li class="dropdown">
+          <a href="http://www.runoob.com/">
+            菜鳥教程
+          </a>
+          <ul class="dropdown-content">
+            <li>
+              <a href="http://www.runoob.com/html/html-tutorial.html">HTML教程</a>
+            </li>
+            <li>
+              <a href="http://www.runoob.com/css/css-tutorial.html">CSS教程</a>
+            </li>
+            <li>
+              <a href="http://www.runoob.com/html/html5-intro.html">HTML5教程</a>
+            </li>
+            <li>
+              <a href="http://www.runoob.com/css3/css3-tutorial.html">CSS3教程</a>
+            </li>
+          </ul>
+        </li>
+        <!-- 二級菜單:indienova -->
+        <li class="dropdown">
+          <a href="https://indienova.com/">
+            indienova
+          </a>
+          <ul class="dropdown-content">
+            <li>
+              <a href="https://indienova.com/indie-game-news/">文章</a>
+            </li>
+            <li>
+              <a href="https://indienova.com/column/">專題</a>
+            </li>
+            <li>
+              <a href="https://indienova.com/indie-game-development/">開發</a>
+            </li>
+            <li>
+              <a href="https://indienova.com/usergames">游戲</a>
+            </li>
+          </ul>
+        </li>
+        <!-- 二級菜單:嗶哩嗶哩動畫 -->
+        <li class="dropdown">
+          <a href="https://www.bilibili.com/">
+            嗶哩嗶哩動畫
+          </a>
+          <ul class="dropdown-content">
+            <li>
+              <a href="https://www.bilibili.com/v/douga/?spm_id_from=333.334.b_7072696d6172795f6d656e75.2">動畫</a>
+            </li>
+            <li>
+              <a href="https://www.bilibili.com/anime/?spm_id_from=333.334.b_7072696d6172795f6d656e75.7">番劇</a>
+            </li>
+          </ul>
+        </li>
+        <!-- 右浮動的一級菜單選項:百度 -->
+        <li id="baiDu">
+          <a href="https://www.baidu.com/">
+            百度
+          </a>
+        </li>
+      </ul>
+  </div>
 
   <!--
 <div align="center">
@@ -142,34 +152,35 @@ img{
 </div>
 -->
 
-<div align="center">
-<h1 style="color:#757DA8">&#10024;最&nbsp;新&nbsp;消&nbsp;息&#10024;
-  </h1>
-  <img src="image/image2.jpeg" width="451" height="300" >
-</div>
-<br/>
-<br/>
-<br/>
-<div align="center">
-<!--
+  <div align="center">
+    <h1 style="color:#757DA8">&#10024;最&nbsp;新&nbsp;消&nbsp;息&#10024;
+    </h1>
+    <img src="image/image2.jpeg" width="451" height="300">
+  </div>
+  <br />
+  <br />
+  <br />
+  <div align="center">
+    <!--
 https://www.sow.org.tw/2023oceanevent/coastalcleanup
 -->
-<button class="bt1">
-花蓮漁港北邊海灘
-</button>
-<br/><br/><br/>
-<button class="bt1">
-  台南市觀夕平台
-  </button>
-  <br/><br/><br/>
-  <button class="bt1">
-    宜蘭縣竹安溪口濕地
+    <button class="bt1">
+      花蓮漁港北邊海灘
     </button>
-</div><br/>
+    <br /><br /><br />
+    <button class="bt1">
+      台南市觀夕平台
+    </button>
+    <br /><br /><br />
+    <button class="bt1">
+      宜蘭縣竹安溪口濕地
+    </button>
+  </div><br />
 
 
-<script type="text/javascript">
-var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+  <script type="text/javascript">
+    var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", { imgDown: "SpryAssets/SpryMenuBarDownHover.gif", imgRight: "SpryAssets/SpryMenuBarRightHover.gif" });
   </script>
 </body>
+
 </html>
