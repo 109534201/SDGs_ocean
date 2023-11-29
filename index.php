@@ -4,7 +4,7 @@ https://109534201.github.io/SDGs_ocean/
 -->
 
 <?php
-include "mane.html";
+include "mane.html ";
 ?>
 
  
