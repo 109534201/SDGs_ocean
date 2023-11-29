@@ -1,16 +1,10 @@
-<!--
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fo3X4Kp89y8gSrhv0fVu9K6%2FSDGS-%25E6%25B5%25B7%25E6%25B4%258B%25E9%2581%258A%25E6%2588%25B2%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3D7NX2ashd05sgT0A4-1" allowfullscreen></iframe>
-https://109534201.github.io/SDGs_ocean/
--->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>淨灘報名資訊系統</title>
-  <style type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小遊戲</title>
+    <style type="text/css">
     body {
       background-color: #D0D3E4;
       padding: 0px;
@@ -37,13 +31,13 @@ https://109534201.github.io/SDGs_ocean/
     .main{
     position:absolute;  /* 這個定位是為了讓這個<div>區域固定在頁面底端 */
      bottom:0px;         /* 讓它定位在底端 */
-     overflow:hidden;    /* 溢出部分隱藏，防止出現第二個滾動條 */
      z-index:-1;         /* 設置元素堆疊順序為最底層，為了不讓它遮住下拉菜單的垂直列表項 */
      width:100%;         /* 設置寬度 */
      /* 因為不是所有瀏覽器都支持CSS3中的calc()方法，所以這裡寫了三條去設置高度 */
      height:-webkit-calc(100% - 200px);
      height:-moz-calc(100% - 200px);
      height:calc(100% - 200px);
+     text-align: center;
     }
     .menu {
       z-index: 1;
@@ -106,39 +100,14 @@ https://109534201.github.io/SDGs_ocean/
 }
   </style>
 </head>
-
 <body>
-
-  <?php
-  include "mane.html";
-  ?>
-<div class="main">
-  <div align="center" >
-    <h1 style="color:#757DA8">&#10024;最&nbsp;新&nbsp;消&nbsp;息&#10024;</h1>
-    <img src="image/image2.jpeg" width="451" height="300">
-  </div>
-  <br />
-  <br />
-  <br />
-  <div align="center">
-    <!--
-https://www.sow.org.tw/2023oceanevent/coastalcleanup
--->
-    <button class="bt1">
-      花蓮漁港北邊海灘
-    </button>
-    <br /><br /><br />
-    <button class="bt1">
-      台南市觀夕平台
-    </button>
-    <br /><br /><br />
-    <button class="bt1">
-      宜蘭縣竹安溪口濕地
-    </button>
-  </div><br />
-
-</div>
-  
-</body>
-
+    <?php
+    include "mane.html";
+    ?>
+    <div class="main"> 
+    <h1 style="color:#757DA8">&#10024;小&nbsp;遊&nbsp;戲&#10024;</h1>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="80%" height="800" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fo3X4Kp89y8gSrhv0fVu9K6%2FSDGS-%25E6%25B5%25B7%25E6%25B4%258B%25E9%2581%258A%25E6%2588%25B2%3Ftype%3Ddesign%26node-id%3D4-2%26t%3DW7V03IZGjYjsTGOd-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26mode%3Ddesign" allowfullscreen></iframe>
+    
+    </div> 
+    </body>
 </html>
