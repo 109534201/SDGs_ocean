@@ -17,8 +17,8 @@
         }
     
         .bt1 {
-          height: 100px;
-          width: 500px;
+          height: 50px;
+          width: 100px;
           border: 5px solid #757DA8;
           border-radius: 20px;
           font-family: "標楷體";
@@ -111,6 +111,11 @@
           padding: 0px;
           text-align: center;
         }
+        td{
+          text-align: center;
+          width: 130px;
+          height: 30px;
+        }
       </style>
     </head>
     
@@ -174,6 +179,34 @@
             </li>
           </ul>
       </div>
-    
+      <div class="main">
+      <h1 style="color:#757DA8">&#10024;提&nbsp;案&nbsp;投&nbsp;稿&#10024;</h1>
+      <div align="center" >
+      
+        <table>
+          <tr>
+            <td>提案名稱：</td>
+            <td><input type="text" placeholder="名稱" required></td>
+          </tr>
+          <tr>
+            <td>姓名：</td>
+            <td><input type="text" placeholder="姓名" required></td>
+          </tr>
+          <tr>
+            <td>連絡電話：</td>
+            <td><input type="tel" placeholder="電話" required></td>
+          </tr>
+          <tr>
+            <td> E-mail：</td>
+            <td><input type="email" placeholder="E-mail" required></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="file" value="上傳檔案" required></td>
+          </tr>
+        </table>
+        <br/>
+        <input type="submit" value="送出" class="bt1">
+  </div>
+    </div>
 </body>
 </html>
