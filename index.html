@@ -37,7 +37,6 @@ https://109534201.github.io/SDGs_ocean/
     .main{
     position:absolute;  /* 這個定位是為了讓這個<div>區域固定在頁面底端 */
      bottom:0px;         /* 讓它定位在底端 */
-     overflow:hidden;    /* 溢出部分隱藏，防止出現第二個滾動條 */
      z-index:-1;         /* 設置元素堆疊順序為最底層，為了不讓它遮住下拉菜單的垂直列表項 */
      width:100%;         /* 設置寬度 */
      /* 因為不是所有瀏覽器都支持CSS3中的calc()方法，所以這裡寫了三條去設置高度 */
@@ -70,7 +69,7 @@ https://109534201.github.io/SDGs_ocean/
       /* 設置背景顏色 */
       text-align: center;
       /* 設置水平對齊方式為居中 */
-      width: 20%;
+      width: 19.9%;
       /* 設置固定寬度 */
     }
 
@@ -86,11 +85,15 @@ https://109534201.github.io/SDGs_ocean/
       /* 去除<a>標簽的下劃線 */
         width: 100%;
     }
+    .dropdown-content{
+      background-color: #666;
+    }
     ul.dropdown-content{
     display: none;
     }
   li.dropdown:hover ul{
 	display: list-item;
+  width: 150%;
 }
 
   .top {
@@ -119,7 +122,7 @@ https://109534201.github.io/SDGs_ocean/
     <ul>
       <ul>
         <li >
-          <a href="https://109534201.github.io/SDGs_ocean/">
+          <a href="index.html">
             首頁
           </a>
         </li>
@@ -130,10 +133,10 @@ https://109534201.github.io/SDGs_ocean/
           </a>
           <ul class="dropdown-content">
             <li>
-              <a href="">地圖</a>
+              <a href="o_map.html">地圖</a>
             </li>
             <li>
-              <a href="">相關資訊</a>
+              <a href="o_information.html">相關資訊</a>
             </li>
            
           </ul>
@@ -145,18 +148,18 @@ https://109534201.github.io/SDGs_ocean/
           </a>
           <ul class="dropdown-content">
             <li>
-              <a href="">相關資訊</a>
+              <a href="c_information.html">相關資訊</a>
             </li>
             <li>
-              <a href="">報名專區</a>
+              <a href="c_sign.html">報名專區</a>
             </li>
             <li>
-              <a href="">活動相片</a>
+              <a href="c_picture.html">活動相片</a>
             </li>
           </ul>
         </li>
         <li >
-          <a href="">
+          <a href="proposal.html">
             提案專區
           </a>
         </li>
