@@ -18,17 +18,17 @@
     }
 
     .bt1 {
-          height: 50px;
-          width: 100px;
-          border: 5px solid #757DA8;
-          border-radius: 20px;
-          font-family: "標楷體";
-          font-size: 18px;
-          color: #757DA8;
-          font-weight: bolder;
-          cursor: pointer;
-          box-shadow: 0px 5px 5px 0.5px #666;
-        }
+      height: 50px;
+      width: 100px;
+      border: 5px solid #757DA8;
+      border-radius: 20px;
+      font-family: "標楷體";
+      font-size: 18px;
+      color: #757DA8;
+      font-weight: bolder;
+      cursor: pointer;
+      box-shadow: 0px 5px 5px 0.5px #666;
+    }
 
     .main {
       text-align: center;
@@ -113,11 +113,35 @@
       text-align: center;
     }
 
-    td {
-      text-align: center;
-      width: 130px;
+    .t {
       height: 30px;
+      width: 300px;
+      border-radius: 5px;
     }
+
+    .t2 {
+      height: 30px;
+      width: 100px;
+      border-radius: 5px;
+    }
+
+    .tt1 {
+      font-size: 18px;
+      font-weight: bold;
+      color: #5B5C5D;
+      text-align: justify;
+      text-align-last: justify;
+      height: 50px;
+    }
+
+    .dd {
+      font-size: 16px;
+      line-height: 150%;
+      color: #000;
+      text-align: left;
+      width: 650px;
+    }
+
   </style>
 </head>
 
@@ -187,15 +211,15 @@
       <!--
 https://theme.northguan-nsa.gov.tw/cleanup/beach/index.aspx
       -->
-      <table>
+      <table width="500">
         <tr>
-          <td>申請單位名稱：</td>
-          <td><input type="text" placeholder="申請單位名稱" required></td>
+          <td width="150" class="tt1">申請單位名稱：</td>
+          <td><input type="text" placeholder="申請單位名稱" required class="t"></td>
         </tr>
         <tr>
-          <td>姓名：</td>
+          <td width="150" class="tt1">淨灘地點：</td>
           <td>
-            <select name="c_Location"> 
+            <select name="c_Location" class="t">
               <option selected="selected" value="1">三芝區 淺水灣</option>
               <option value="20">三芝區 台二線17.2公里處旁沙灘</option>
               <option value="8">石門區 麟山鼻步道</option>
@@ -210,45 +234,60 @@ https://theme.northguan-nsa.gov.tw/cleanup/beach/index.aspx
               <option value="4">金山區 中角灣</option>
               <option value="17">基隆市 基隆外木山汫水澳</option>
               <option value="999">基隆市 和平島公園地區</option>
-
             </select>
           </td>
         </tr>
         <tr>
-          <td>申請日期：</td>
-          <td><input type="date" required></td>
+          <td width="150" class="tt1">申請日期：</td>
+          <td>
+            <p>
+              <input type="date" required class="t">
+            </p>
+            <p>
+              <input type="time" required class="t2">至<input type="time" required class="t2">
+            </p>
+          </td>
         </tr>
         <tr>
-          <td> 參與人數：</td>
-          <td><input type="number" required></td>
-        </tr>
-      </table>
-      <table>
-        <tr style="border:solid 1px #666;">
-          <td rowspan="3">淨灘用具：</td>
-          <td>手套：</td>
-          <td><input type="number" max="100" min="0">雙&nbsp;&nbsp;（最多100雙）</td>
-        </tr>
-        <tr>
-          <td>夾子：</td>
-          <td><input type="number" max="100" min="0">隻&nbsp;&nbsp;（最多100隻）</td>
-        </tr>
-        <tr>
-          <td>磅秤：</td>
-          <td><input type="number" max="1" min="0">個&nbsp;&nbsp;（數量1個以下）</td>
+          <td width="150" class="tt1">參與人數：</td>
+          <td><input type="number" required class="t" min="1"></td>
         </tr>
       </table>
       <br />
-      <span>
-        ◎ 環境維護袋:依據實際狀況提供。<br />
-        ◎ 本處接受淨灘申請後，將由專人現場發送淨灘工具及引導，並聯繫環保局清潔隊協助垃圾載運事宜。<br />
-        備註:<br />
-        1. 由於淨灘時無法手持多樣工具，敬請按所需選擇用具數量，管理單位並得視情況調整另通知申請人。<br />
-        2. 響應環保政策，除了手套/環境維護袋以外，其餘工具均需回收使用。
-      </span>
+      <table width="500">
+        <tr>
+          <td rowspan="3" class="tt1">淨灘用具：</td>
+          <td class="tt1">手套：</td>
+          <td><input type="number" max="100" min="0" class="t2"><span class="tt1">&emsp;雙&nbsp;&nbsp;（最多100雙）</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="tt1">夾子：</td>
+          <td><input type="number" max="100" min="0" class="t2"><span class="tt1">&emsp;隻&nbsp;&nbsp;（最多100隻）</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="tt1">磅秤：</td>
+          <td><input type="number" max="1" min="0" class="t2"><span class="tt1">&emsp;個&nbsp;&nbsp;（數量1個以下）</span></td>
+        </tr>
+      </table>
+
       <br />
-      <input type="submit" value="送出" class="bt1">
+      <div align="center">
+        <p class="dd">
+          ◎ 環境維護袋:依據實際狀況提供。<br />
+          ◎ 本處接受淨灘申請後，將由專人現場發送淨灘工具及引導，並聯繫環保局清潔隊協助垃圾載運事宜。<br />
+          <br />
+          備註:<br />
+          1. 由於淨灘時無法手持多樣工具，敬請按所需選擇用具數量，管理單位並得視情況調整另通知申請人。<br />
+          2. 響應環保政策，除了手套/環境維護袋以外，其餘工具均需回收使用。
+        </p>
+      </div>
+
+
     </div>
+    <br />
+    <input type="submit" value="送出" class="bt1">
   </div>
 </body>
 
