@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>海洋資訊系統</title>
+  <title>海洋生態保衛讚</title>
   <style type="text/css">
     body {
       background-color: #D0D3E4;
@@ -143,6 +143,13 @@
     }
 
   </style>
+<script>
+  function m_in(){
+    alert("※此地點7天內有舉辦淨灘活動");
+    
+  }
+</script>
+
 </head>
 
 <body>
@@ -152,7 +159,7 @@
         -->
   <div class="menu">
     <div>
-      <p class="top">海洋資訊系統</p>
+      <p class="top">海洋生態保衛讚</p>
     </div>
     <ul>
       <ul>
@@ -217,11 +224,11 @@ https://theme.northguan-nsa.gov.tw/cleanup/beach/index.aspx
           <td><input type="text" placeholder="申請單位名稱" required class="t"></td>
         </tr>
         <tr>
-          <td width="150" class="tt1">淨灘地點：</td>
+          <td width="150" class="tt1" onmouseenter="m_in()">淨灘地點：</td>
           <td>
             <select name="c_Location" class="t">
-              <option selected="selected" value="1">三芝區 淺水灣</option>
-              <option value="20">三芝區 台二線17.2公里處旁沙灘</option>
+              <option selected="selected" value="1" onchange="m_in()">三芝區 淺水灣</option>
+              <option value="20" >三芝區 台二線17.2公里處旁沙灘</option>
               <option value="8">石門區 麟山鼻步道</option>
               <option value="12">石門區 不能說的秘密木棧道旁沙灘 麟山鼻漁港旁沙灘</option>
               <option value="18">石門區 山溪里活動中心後方海灘</option>
