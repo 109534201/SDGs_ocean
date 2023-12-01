@@ -1,54 +1,294 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>無標題文件</title>
-<style>
-.slider_container {
-    margin: 30px auto;
-    width: 400px;
-    height: 280px;
-    position: relative;
-    border: 20px solid;    
-    border-color: #fff;
-    border-bottom-width: 100px;
-    background-color: #f5f5f5;
-    box-shadow: #666 0 0 5px;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.slider_container div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
-</style>
-<link rel="stylesheet" href="css/flexslider.css" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script>
- 
-  $(function() {
-    $(".flexslider").flexslider({
-    slideshowSpeed: 5000, //展示时间间隔ms
-    animationSpeed: 500, //滚动时间ms
-    touch: true //是否支持触屏滑动
-  });
-}); 
-</script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>海洋資訊系統</title>
+  <style type="text/css">
+    body {
+      background-color: #D0D3E4;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    img {
+      border: 8px solid #757DA8;
+      border-radius: 20px;
+    }
+
+    .bt1 {
+      height: 50px;
+      width: 100px;
+      border: 5px solid #757DA8;
+      border-radius: 20px;
+      font-family: "標楷體";
+      font-size: 18px;
+      color: #757DA8;
+      font-weight: bolder;
+      cursor: pointer;
+      box-shadow: 0px 5px 5px 0.5px #666;
+    }
+
+    .main {
+      text-align: center;
+      position: absolute;
+      /* 這個定位是為了讓這個<div>區域固定在頁面底端 */
+      bottom: 0px;
+      /* 讓它定位在底端 */
+      z-index: -1;
+      /* 設置元素堆疊順序為最底層，為了不讓它遮住下拉菜單的垂直列表項 */
+      width: 100%;
+      /* 設置寬度 */
+      /* 因為不是所有瀏覽器都支持CSS3中的calc()方法，所以這裡寫了三條去設置高度 */
+      height: -webkit-calc(100% - 200px);
+      height: -moz-calc(100% - 200px);
+      height: calc(100% - 200px);
+    }
+
+    .menu {
+      z-index: 1;
+      width: 100%;
+      height: 150px;
+      background-color: #757DA8;
+
+    }
+
+    .menu ul {
+      margin: 0px;
+      /* 去除外邊距，使其能夠緊貼<div>邊緣 */
+      padding: 0px;
+      /* 去除內邊距，使其能夠緊貼<div>邊緣 */
+      list-style-type: none;
+      /* 去除無序列表的標識符 */
+    }
+
+    li {
+
+      float: left;
+      /* 設置左浮動，讓它列表項的方向變成水平方向 */
+      background-color: #757DA8;
+      /* 設置背景顏色 */
+      text-align: center;
+      /* 設置水平對齊方式為居中 */
+      width: 19.9%;
+      /* 設置固定寬度 */
+    }
+
+    /* 設置header區域中的<a>標簽的初始樣式 */
+    a {
+      display: block;
+      /* 轉換為塊級元素，為了讓點擊範圍能夠擴充到整個<li>區域 */
+      line-height: 50px;
+      /* 設置內邊距讓文字垂直居中。 */
+      color: #FFFFFF;
+      /* 修改文字初始顏色 */
+      text-decoration: none;
+      /* 去除<a>標簽的下劃線 */
+      width: 100%;
+    }
+
+    .dropdown-content {
+      background-color: #666;
+    }
+
+    ul.dropdown-content {
+      display: none;
+    }
+
+    li.dropdown:hover ul {
+      display: list-item;
+      width: 150%;
+    }
+
+    .top {
+      font-size: 72px;
+      font-weight: bolder;
+      color: #FFF;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #FFF;
+      margin: 0px;
+      padding: 0px;
+      text-align: center;
+    }
+
+    .t {
+      height: 30px;
+      width: 300px;
+      border-radius: 5px;
+    }
+
+    .t2 {
+      height: 30px;
+      width: 100px;
+      border-radius: 5px;
+    }
+
+    .tt1 {
+      font-size: 18px;
+      font-weight: bold;
+      color: #5B5C5D;
+      text-align: justify;
+      text-align-last: justify;
+      height: 50px;
+    }
+
+    .dd {
+      font-size: 16px;
+      line-height: 150%;
+      color: #000;
+      text-align: left;
+      width: 650px;
+    }
+
+  </style>
 </head>
 
+<body>
 
-<body >
-<div align="center" >
-  <div class="flexslider" style="width:350px; margin-left:100px;">
-    <ul class="slides">
-      <li><img src="http://thumbsnap.com/i/vY5tCm0U.jpg?0717" alt="" width="350" height="250"></li>
-      <li><img src="http://thumbsnap.com/i/n0CLkUhq.jpg?0717" alt="" width="350" height="250"></li>
-          <li><img src="http://thumbsnap.com/i/yqS8LD0o.jpg?0717" alt="" width="350" height="250"></li>
-    </ul>
+  <!--
+          https://www.zendei.com/article/65771.html
+        -->
+  <div class="menu">
+    <div>
+      <p class="top">海洋資訊系統</p>
+    </div>
+    <ul>
+      <ul>
+        <li>
+          <a href="index.html">
+            首頁
+          </a>
+        </li>
+        <!-- 二級菜單:海洋保育區 -->
+        <li class="dropdown">
+          <a href="">
+            海洋保育區
+          </a>
+          <ul class="dropdown-content">
+            <li>
+              <a href="o_map.html">地圖</a>
+            </li>
+            <li>
+              <a href="o_information.html">相關資訊</a>
+            </li>
+
+          </ul>
+        </li>
+        <!-- 二級菜單:淨灘 -->
+        <li class="dropdown">
+          <a href="">
+            淨灘
+          </a>
+          <ul class="dropdown-content">
+            <li>
+              <a href="c_information.html">相關資訊</a>
+            </li>
+            <li>
+              <a href="c_sign.html">報名專區</a>
+            </li>
+            <li>
+              <a href="c_picture.html">活動相片</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="proposal.html">
+            提案專區
+          </a>
+        </li>
+        <li>
+          <a href="game.html">
+            小遊戲
+          </a>
+        </li>
+      </ul>
   </div>
-</div>
+  <div class="main">
+    <h1 style="color:#757DA8">&#10024;淨&nbsp;灘&nbsp;報&nbsp;名&#10024;</h1>
+    <div align="center">
+      <!--
+https://theme.northguan-nsa.gov.tw/cleanup/beach/index.aspx
+      -->
+      <table width="500">
+        <tr>
+          <td width="150" class="tt1">申請單位名稱：</td>
+          <td><input type="text" placeholder="申請單位名稱" required class="t"></td>
+        </tr>
+        <tr>
+          <td width="150" class="tt1">淨灘地點：</td>
+          <td>
+            <select name="c_Location" class="t">
+              <option selected="selected" value="1">三芝區 淺水灣</option>
+              <option value="20">三芝區 台二線17.2公里處旁沙灘</option>
+              <option value="8">石門區 麟山鼻步道</option>
+              <option value="12">石門區 不能說的秘密木棧道旁沙灘 麟山鼻漁港旁沙灘</option>
+              <option value="18">石門區 山溪里活動中心後方海灘</option>
+              <option value="13">石門區 台二線23.5K海灣新城前沙灘(極北藍點旁)</option>
+              <option value="2">石門區 白沙灣</option>
+              <option value="6">石門區 風箏公園沙灘</option>
+              <option value="3">石門區 麟山鼻</option>
+              <option value="19">石門區 石門洞沙灘</option>
+              <option value="7">石門區 老梅綠石槽</option>
+              <option value="4">金山區 中角灣</option>
+              <option value="17">基隆市 基隆外木山汫水澳</option>
+              <option value="999">基隆市 和平島公園地區</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td width="150" class="tt1">申請日期：</td>
+          <td>
+            <p>
+              <input type="date" required class="t">
+            </p>
+            <p>
+              <input type="time" required class="t2">至<input type="time" required class="t2">
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td width="150" class="tt1">參與人數：</td>
+          <td><input type="number" required class="t" min="1"></td>
+        </tr>
+      </table>
+      <br />
+      <table width="500">
+        <tr>
+          <td rowspan="3" class="tt1">淨灘用具：</td>
+          <td class="tt1">手套：</td>
+          <td><input type="number" max="100" min="0" class="t2"><span class="tt1">&emsp;雙&nbsp;&nbsp;（最多100雙）</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="tt1">夾子：</td>
+          <td><input type="number" max="100" min="0" class="t2"><span class="tt1">&emsp;隻&nbsp;&nbsp;（最多100隻）</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="tt1">磅秤：</td>
+          <td><input type="number" max="1" min="0" class="t2"><span class="tt1">&emsp;個&nbsp;&nbsp;（數量1個以下）</span></td>
+        </tr>
+      </table>
+
+      <br />
+      <div align="center">
+        <p class="dd">
+          ◎ 環境維護袋:依據實際狀況提供。<br />
+          ◎ 本處接受淨灘申請後，將由專人現場發送淨灘工具及引導，並聯繫環保局清潔隊協助垃圾載運事宜。<br />
+          <br />
+          備註:<br />
+          1. 由於淨灘時無法手持多樣工具，敬請按所需選擇用具數量，管理單位並得視情況調整另通知申請人。<br />
+          2. 響應環保政策，除了手套/環境維護袋以外，其餘工具均需回收使用。
+        </p>
+      </div>
+
+
+    </div>
+    <br />
+    <input type="submit" value="送出" class="bt1">
+  </div>
 </body>
+
 </html>
