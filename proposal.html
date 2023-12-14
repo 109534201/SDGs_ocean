@@ -121,7 +121,7 @@
 
     .t2 {
       height: 30px;
-      width: 100px;
+      width: 130px;
       border-radius: 5px;
     }
 
@@ -219,11 +219,11 @@ https://theme.northguan-nsa.gov.tw/cleanup/beach/index.aspx
       -->
       <table width="500">
         <tr>
-          <td width="150" class="tt1">申請單位名稱：</td>
+          <td width="150" class="tt1"><span style="color: red;">*</span>申請單位名稱：</td>
           <td><input type="text" placeholder="申請單位名稱" required class="t"></td>
         </tr>
         <tr>
-          <td width="150" class="tt1" onmouseenter="m_in()">淨灘地點：</td>
+          <td width="150" class="tt1"><span style="color: red;">*</span>淨灘地點：</td>
           <td>
             <select name="c_Location" class="t" onchange="m_in()">
               <option selected="selected" value="1" >三芝區 淺水灣</option>
@@ -246,40 +246,36 @@ https://theme.northguan-nsa.gov.tw/cleanup/beach/index.aspx
           </td>
         </tr>
         <tr>
-          <td width="150" class="tt1">申請日期：</td>
+          <td width="150" class="tt1"><span style="color: red;">*</span>申請日期：</td>
           <td>
             <p>
-              <input type="date" required class="t">
+              <input type="date" required class="t" value="2023-12-25">
             </p>
             <p>
-              <input type="time" required class="t2">至<input type="time" required class="t2">
+              <input type="time" required class="t2" value="08:30">至<input type="time" required class="t2" value="13:30">
             </p>
           </td>
         </tr>
         <tr>
-          <td width="150" class="tt1">參與人數：</td>
+          <td width="150" class="tt1"><span style="color: red;">*</span>預計參與人數：</td>
           <td><input type="number" required class="t" min="1"></td>
         </tr>
       </table>
       <br />
-      <table width="500">
-        <tr>
-          <td rowspan="3" class="tt1">淨灘用具：</td>
-          <td class="tt1">手套：</td>
-          <td><input type="number" max="100" min="0" class="t2"><span class="tt1">&emsp;雙&nbsp;&nbsp;（最多100雙）</span>
-          </td>
-        </tr>
-        <tr>
-          <td class="tt1">夾子：</td>
-          <td><input type="number" max="100" min="0" class="t2"><span class="tt1">&emsp;隻&nbsp;&nbsp;（最多100隻）</span>
-          </td>
-        </tr>
-        <tr>
-          <td class="tt1">磅秤：</td>
-          <td><input type="number" max="1" min="0" class="t2"><span class="tt1">&emsp;個&nbsp;&nbsp;（數量1個以下）</span></td>
-        </tr>
-      </table>
-
+<table>
+  <tr>
+    <td  class="tt1">申請淨灘募款：</td>
+    <td><input type="number" required class="t"></td>
+  </tr>
+  <tr>
+    <td  class="tt1">金額達標是否繼續募款：</td>
+    <td><input type="radio" required >是&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" required >否</td>
+  </tr>
+  <tr>
+    <td class="tt1">募款說明：</td>
+    <td><textarea  class="t"></textarea></td>
+  </tr>
+</table>
       <br />
       <div align="center">
         <p class="dd">
