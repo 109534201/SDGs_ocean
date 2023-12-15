@@ -25,8 +25,8 @@ https://www.oca.gov.tw/ch/home.jsp?id=349&parentpath=0,295,348
     }
 
     .bt1 {
-      height: 100px;
-      width: 500px;
+      height: 45px;
+      width: 100px;
       border: 5px solid #757DA8;
       border-radius: 20px;
       font-family: "標楷體";
@@ -109,6 +109,13 @@ https://www.oca.gov.tw/ch/home.jsp?id=349&parentpath=0,295,348
   padding: 0px;
   text-align: center;
 }
+.t1{
+	text-align: center;
+	border-width: 3px;
+	font-weight: bolder;
+  font-size: larger;
+}
+
   </style>
 </head>
 
@@ -182,28 +189,49 @@ https://www.oca.gov.tw/ch/home.jsp?id=349&parentpath=0,295,348
   </div>
 <div class="main">
   <div align="center" >
-    <h1 style="color:#757DA8">&#10024;最&nbsp;新&nbsp;消&nbsp;息&#10024;</h1>
-    <img src="image/image.jpg" width="500px">
+    <h1 style="color:#757DA8">&#10024;捐&nbsp;款&#10024;</h1>
   </div>
-  <br />
-  <br />
-  <br />
-  <div align="center">
-    <!--
-https://www.sow.org.tw/2023oceanevent/coastalcleanup
--->
-    <button class="bt1">
-      花蓮漁港北邊海灘
-    </button>
-    <br /><br /><br />
-    <button class="bt1">
-      台南市觀夕平台
-    </button>
-    <br /><br /><br />
-    <button class="bt1">
-      宜蘭縣竹安溪口濕地
-    </button>
-  </div><br />
+  <div align="center" >
+    <table>
+      <tr>
+        <td class="t1">
+          名稱
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" style="width: 100%;"><br/><br/>
+        </td>
+      </tr>
+      <tr>
+        <td class="t1">
+          金額
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="radio" > 1,000&emsp;
+          <input type="radio" > 2,000&emsp;
+          <input type="radio" > 5,000<br/>
+          <input type="radio" > 8,000&emsp;
+          <input type="radio" > 10,000<br/>
+          <input type="radio" >其他<input type="text" ><br/><br/>
+        </td>
+      </tr>
+      <tr>
+        <td class="t1">支付方式</td>
+      </tr>
+      <tr>
+        <td><input type="radio" > 信用卡&emsp;
+          <input type="radio" > Line Pay<br/>
+          <input type="radio" > 街口&emsp;&emsp;
+          <input type="radio" > WebATM<br/><br/>
+          </td>
+      </tr>
+
+    </table>
+    <input type="submit" value="下一步" class="bt1">
+  </div>
 
 </div>
   
